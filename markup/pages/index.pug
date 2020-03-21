@@ -36,34 +36,114 @@ html(class="no-js", lang="ru")
 
     .page__bottom
       +footer()
-    //- script(src="https://api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
+
+
+
+
+    script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDO60TDSumlziHzbybxGGbAEegP7zLX0Y&callback=initMap" )
     script(src='%=static=%js/separate-js/lazyload.min.js' )
     script(src='%=static=%js/separate-js/jquery.min.js')
     script(src='%=static=%js/separate-js/slick.min.js')
+    script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+
+    script(src='%=static=%js/separate-js/jquery.mask.min.js' )
+
     script(src='%=static=%js/main%=hash=%%=min=%.js')
 
-    //- script.
-    //-   ymaps.ready(init);
-
-    //-   function init() {
-    //-     var myMap = new ymaps.Map('map', {
-    //-       center: [55.720418, 37.772047],
-    //-       zoom: 17,
-    //-       controls: ['']
-    //-     }, {
-    //-           searchControlProvider: ''
-    //-       });
-
-    //-     var myPlacemark = new ymaps.Placemark(
-    //-       [55.720418, 37.772047], {
-    //-           balloonContent: '109428, Город Москва, Рязанский проспект, дом 26, строение 13, эт 3 пом 1 ком 13'
-    //-       }, {
-    //-           //- iconLayout: 'default#image',
-    //-           //- iconImageHref: 'assets/images/general/marker.png',
-    //-           //- iconImageSize: [14, 19],
-    //-       }
-    //-     );
-
-    //-     myMap.geoObjects.add(myPlacemark);
-
-    //-   }
+    script.
+      function initMap() {
+          // The location of Uluru
+          var uluru = {lat: 55.768613, lng: 37.635394 };
+          // The map, centered at Uluru
+          var map = new google.maps.Map( document.getElementById('map'), {
+              zoom: 17,
+              center: uluru,
+              disableDefaultUI: true,
+              zoomControl: true,
+              styles: [
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#444444"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 45
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#5199ff"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                }
+            ]
+            }
+          );
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, icon: 'assets/images/general/marker.svg', map: map});
+          //- map.setCenter(55.768637, 37.630254);
+          map.panBy(-200, 0);
+        }

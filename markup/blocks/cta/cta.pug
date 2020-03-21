@@ -1,6 +1,6 @@
 mixin cta(data)
   section.cta
-    .cta__container.container
+    .cta__container.container.flex
       .cta__col
         h2.cta__title.title Остались вопросы?
 
@@ -8,7 +8,7 @@ mixin cta(data)
 
       .cta__col
         form.cta__form.form
-          .form__row
+          .form__row.flex
             .form__field
               label.form__label
                 span.form__label-text Как к вам обращаться?
@@ -19,18 +19,19 @@ mixin cta(data)
                 span.form__label-text E-mail
                 input.form__input(type="text", name="email", value="")
 
-            .form__field
+            .form__field.form__field_phone
               label.form__label
                 span.form__label-text Номер телефона
                   span.form__label-note *
                 input.form__input(type="text", name="phone", value="")
 
-            input.form__submit(type="submit",  value="Отправить")
+            .form__field
+              input.form__submit.button.button_yellow_theme(type="submit",  value="Отправить")
 
 
           .form__row
 
-            label.form__privacy
+            label.form__privacy.flex
               input.form__privacy-checkbox(type="checkbox", value="" )
               .form__privacy-text Даю согласие на обработку моих персональных данных
 

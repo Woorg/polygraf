@@ -2,4 +2,7 @@ mixin video(data)
   section.video
     .video__container.container
       .video__w
-        button.video__button
+        .video__object
+          button.video__button
+            != pugHelpers.Icon.call(locals, {iconName: 'video-button', className: 'video__icon'})
+          |<iframe class="video__iframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/G4cJ4wviwS8?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"></iframe>

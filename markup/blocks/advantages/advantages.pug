@@ -3,33 +3,32 @@ mixin advantages(data)
     .advantages__container.container
       h2.advantages__title.title Почему стоит работать с нами
 
-      ul.advantages__list
+      ul.advantages__list.flex.flex_start
         li.advantages__item
-          .advantages__image
-            img(src="assets/images/content/advantages-1.svg", alt="")
+          != pugHelpers.Icon.call(locals, {iconName: 'advantages-1', className: 'advantages__image'})
           .advantages__text Cобственное производство
 
         li.advantages__item
-          .advantages__image
-            img(src="assets/images/content/advantages-2.svg", alt="")
+          != pugHelpers.Icon.call(locals, {iconName: 'advantages-2', className: 'advantages__image'})
+
           .advantages__text Опыт более 10 лет
 
         li.advantages__item
-          .advantages__image
-            img(src="assets/images/content/advantages-3.svg", alt="")
+          != pugHelpers.Icon.call(locals, {iconName: 'advantages-3', className: 'advantages__image'})
+
           .advantages__text Работаем по всей России и странам СНГ
 
         li.advantages__item
-          .advantages__image
-            img(src="assets/images/content/advantages-4.svg", alt="")
+          != pugHelpers.Icon.call(locals, {iconName: 'advantages-4', className: 'advantages__image'})
+
           .advantages__text Тираж от 100 книг
 
         li.advantages__item
-          .advantages__image
-            img(src="assets/images/content/advantages-5.svg", alt="")
+          != pugHelpers.Icon.call(locals, {iconName: 'advantages-5', className: 'advantages__image'})
+
           .advantages__text Выполнено более 1000 заказов на печать книг, суммарный тираж более 1млн экземпляров.
 
         li.advantages__item
-          .advantages__image
-            img(src="assets/images/content/advantages-6.svg", alt="")
+          != pugHelpers.Icon.call(locals, {iconName: 'advantages-6', className: 'advantages__image'})
+
           .advantages__text Вошли в топ 50 книжных типографий — лидеров российского рынка по тиражам.

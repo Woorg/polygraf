@@ -1,1 +1,62 @@
+.clients
+  &__container
+    padding-top: 120px
+    padding-bottom: 120px
+
+  &__title
+    margin-bottom: 85px
+    text-align: center
+  &__slider
+    padding-bottom: 70px
+
+
+  &__item
+    position: relative
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+  &__image
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+
+  .slick-dots
+    li
+      button
+        position: relative
+        &:before
+          position: absolute
+          top: 50%
+          left: 50%
+          width: 6px
+          height: 6px
+          background-color: rgba(51, 204, 102, 0.5)
+          font-size: 0
+          border-radius: 50%
+          transform: translate(-50%, -50%)
+
+      &.slick-active
+        button
+          &:before
+            width: 10px
+            height: 10px
+            background-color: #33cc66
+          &:after
+            position: absolute
+            top: 50%
+            left: 50%
+            z-index: 1
+            width: 6px
+            height: 6px
+            content: ""
+            background-color: #ffff99
+            border-radius: 50%
+            transform: translate(-50%, -50%)
+
 

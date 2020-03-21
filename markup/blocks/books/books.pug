@@ -1,79 +1,89 @@
 mixin books(data)
-  section.books
+  section.books.lazy(data-bg='url("assets/images/content/books-bg.jpg")')
     .books__container.container
       h2.books__title.title Отпечатанные нами книги
 
-      .books__slider
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-1.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
+      .books__slider-w
 
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-2.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-3.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-4.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-5.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-6.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-7.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
-        .books__item-w
-          a.books__item(href="assets/images/content/book-2.jpg")
-            .books__image
-              img(src="assets/images/content/book-8.jpg", alt="")
-            .books__content
-              .books__zoom
-              .books__bottom
-                .books__text Вид переплета
-                .books__text Вид и покрытие обложки
+        .books__slider.flex
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-1.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-2.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+          .books__item-w
+            a.books__item(href="assets/images/content/book-2.jpg")
+              .books__image
+                img(src="assets/images/content/book-8.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-4.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-5.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-6.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-7.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+          .books__item-w
+            a.books__item(href="assets/images/content/book-big.jpg")
+              .books__image
+                img(src="assets/images/content/book-8.jpg", alt="")
+              .books__content
+                != pugHelpers.Icon.call(locals, {iconName: 'zoom', className: 'books__zoom'})
+                .books__bottom
+                  .books__text Вид переплета
+                  .books__text Вид и покрытие обложки
+
+        .books__slider-nav
+          button.books__slider-prev
+            |<svg class="books__slider-arrow" width="17" height="28" viewBox="0 0 17 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3L3 14L14 25" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+          button.books__slider-next
+            |<svg class="books__slider-arrow" width="17" height="28" viewBox="0 0 17 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3L3 14L14 25" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>

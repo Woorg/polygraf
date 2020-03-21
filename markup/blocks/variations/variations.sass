@@ -1,14 +1,61 @@
 .variations
+  overflow: hidden
   &__container
     padding-top: 80px
     padding-bottom: 80px
 
-  &__row
-    margin-bottom: 0
+  // &__row
+
   &__title
+    margin-bottom: 26px
+
+  &__slider-w
+    position: relative
+    margin-bottom: 60px
+
+
+  &__slider-prev,
+  &__slider-next
+    +resetbutton
+    position: absolute
+    top: calc(50% - 25px)
+    color: #33CC66
+    transform: translateY(-50% )
+
+  &__slider-prev
+    left: 0
+
+  &__slider-next
+    right: 0
+    transform: translateY(-50%) rotate(180deg)
+
+
+  &__col
+    // overflow: hidden
+    &:last-child
+      margin-left: auto
+
+  &__col-title
     margin-bottom: 56px
 
-  // &__slider
+  &__list
+    margin-right: -20px
+    margin-left: -20px
 
+  &__item
+    padding-right: 20px
+    padding-left: 20px
+    max-width: 230px
+    width: 100%
 
+  &__image
+    margin-bottom: 12px
+    font-size: 0
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 5px
 
+  &__item-title
+    color: #855935
+    font-size: 18px
+    font-weight: 600
+    letter-spacing: 0.9px

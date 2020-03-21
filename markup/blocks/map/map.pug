@@ -1,21 +1,19 @@
 mixin map(data)
   .map
-    #map.map__area
-
     .map__container.container
-      ul.map__contacts
-        li.map__contact
-          .map__icon-w
+      .map__contacts-w
+        ul.map__contacts
+          li.map__contact.flex
             != pugHelpers.Icon.call(locals, {iconName: 'time-icon', className: 'map__icon', iconWidth: '28', iconHeight: '28'})
-          .map__text понедельник - пятница 9.00 - 18.00
+            .map__text понедельник - пятница <br/>9.00 - 18.00
 
-        li.map__contact
-          .map__icon-w
+          li.map__contact.flex
             != pugHelpers.Icon.call(locals, {iconName: 'address-icon', className: 'map__icon', iconWidth: '26', iconHeight: '26'})
-          .map__text Просвирин переулок, 15 Москва, Россия, 107045
+            .map__text Просвирин переулок, 15 Москва, <br/>Россия, 107045
 
-        li.map__contact
-          .map__icon-w
+          li.map__contact.flex
             != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'map__icon', iconWidth: '26', iconHeight: '20'})
-          a.map__text(href="mailto:poligraf@mail.ru") poligraf@mail.ru
+            a.map__text(href="mailto:poligraf@mail.ru") poligraf@mail.ru
+
+    #map.map__area
 
