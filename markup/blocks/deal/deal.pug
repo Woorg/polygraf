@@ -1,7 +1,5 @@
 mixin deal(data)
   section.deal.lazy(data-bg='url("assets/images/content/deal-bg.jpg")')
-    != pugHelpers.Icon.call(locals, {iconName: 'red-shape', className: 'deal__line'})
-
     .deal__container.container
       h2.deal__title.title.title_big <span>Акция</span> в честь юбилея <span>Победы</span>
       .deal__text книги по военной тематике печатаем за <span>75%</span> от стоимости
@@ -9,3 +7,5 @@ mixin deal(data)
       a.deal__button.button(href="#") Заказать сейчас
 
       img.deal__soldier.lazy(data-src='assets/images/content/soldier.png')
+
+    != pugHelpers.Icon.call(locals, {iconName: 'red-shape', className: 'deal__line'})

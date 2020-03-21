@@ -9,28 +9,40 @@
 .flex_bottom
   align-items: flex-end
 
-
 .title
   color: #38200c
-  font-size: 24px
+  font-size: 18px
   font-weight: 700
-  letter-spacing: 1.2px
+  letter-spacing: 0.9px
   text-transform: uppercase
+  +mq($small)
+    font-size: 24px
+    letter-spacing: 1.2px
+
   &_biggest
     color: #ffffff
-    font-size: 80px
     font-weight: 900
-    letter-spacing: 8px
-    line-height: 1.125
+    font-size: 30px
+    letter-spacing: 3px
+    line-height: 1.3
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
+    +mq($small)
+      font-size: 80px
+      letter-spacing: 8px
+      line-height: 1.125
+
 
   &_big
     color: #151515
-    font-size: 60px
+    font-size: 30px
     font-weight: 900
-    letter-spacing: 3px
     line-height: 1.333
+    letter-spacing: 1.5px
     text-transform: uppercase
+    +mq($small)
+      font-size: 60px
+      letter-spacing: 3px
+
     span
       color: #dc4129
 
@@ -56,16 +68,64 @@
     background-color: darken(#33cc66, 10)
     +tr(background-color .3s ease)
 
+  &_callback
+    padding: 0
+    height: auto
+    background: transparent
+    letter-spacing: normal
+    span
+      display: none
+      +mq($small)
+        padding-top: 22px
+        padding-right: 30px
+        padding-bottom: 18px
+        padding-left: 30px
+        height: 64px
+        display: block
+        background-color: #33cc66
+        color: #ffffff
+        font-size: 20px
+        font-weight: 700
+        line-height: 1
+        letter-spacing: 1px
+        border-radius: 50px
+        text-decoration: none
+        +tr(background-color .3s ease)
+    .button__icon
+      position: relative
+      z-index: 1
+      text-indent: 0
+      text-align: left
+      font-size: 20px
+      height: 36px
+      +mq($small)
+        display: none
+
+
+    &:hover
+      span
+        +mq($small)
+          background-color: darken(#33cc66, 10)
+          +tr(background-color .3s ease)
+
+
+
+
+
+
   &_yellow_theme
     padding-top: 11px
     padding-bottom: 10px
-    height: 40px
+    height: 50px
     background-color: #ffff99
     color: #855935
     font-size: 16px
     font-weight: 700
     letter-spacing: 0.8px
     border-radius: 50px
+    +mq($small)
+      height: 40px
+
     &:hover
       background-color: darken(#ffff99, 10)
       +tr(background-color .3s ease)

@@ -11,27 +11,25 @@ mixin cta(data)
           .form__row.flex
             .form__field
               label.form__label
-                span.form__label-text Как к вам обращаться?
-                input.form__input(type="text", name="name", value="")
+                //- span.form__label-text Как к вам обращаться?
+                input.form__input(type="text", name="name", value="" placeholder="Как к вам обращаться?")
 
             .form__field
               label.form__label
-                span.form__label-text E-mail
-                input.form__input(type="text", name="email", value="")
+                //- span.form__label-text E-mail
+                input.form__input(type="text", name="email", value="" placeholder="E-mail")
 
             .form__field.form__field_phone
               label.form__label
-                span.form__label-text Номер телефона
-                  span.form__label-note *
-                input.form__input(type="text", name="phone", value="")
+                //- span.form__label-text Номер телефона
+                  //- span.form__label-note *
+                input.form__input(type="text", name="phone", value="" placeholder="Номер телефона")
 
             .form__field
               input.form__submit.button.button_yellow_theme(type="submit",  value="Отправить")
 
 
-          .form__row
-
             label.form__privacy.flex
-              input.form__privacy-checkbox(type="checkbox", value="" )
+              input.form__privacy-checkbox(type="checkbox", value="" checked)
               .form__privacy-text Даю согласие на обработку моих персональных данных
 

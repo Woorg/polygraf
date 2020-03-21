@@ -1,19 +1,25 @@
 .video
   &__container
-    padding-top: 60px
-    padding-bottom: 120px
+    padding-top: 64px
+    padding-bottom: 57px
+    +mq($small)
+      padding-bottom: 120px
+
   &__w
     border: 1px solid #33cc66
-    padding: 25px
     margin: auto
+    padding: 10px
     max-width: 820px
     width: 100%
     border-radius: 10px
+    +mq($small)
+      padding: 25px
+
 
 
   &__object
     position: relative
-    padding-top: 64%
+    padding-top: 57.4%
     max-width: 769px
     background-color: #ededed
     overflow: hidden
@@ -47,6 +53,14 @@
     color: #33CC66
     opacity: 1
     transform: translate(-50%, -50%)
+
     &:hover
       color: darken(#3C6, 10)
+
+  &__icon
+    width: 40px
+    height: 40px
+    +mq($small)
+      width: 88px
+      height: 88px
 

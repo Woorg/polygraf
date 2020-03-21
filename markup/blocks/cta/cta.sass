@@ -1,29 +1,51 @@
 .cta
   background-color: #33cc66
   &__container
-    padding-top: 76px
-    padding-bottom: 76px
-
+    padding-top: 55px
+    padding-bottom: 55px
+    flex-direction: column
+    +mq($small)
+      padding-top: 76px
+      padding-bottom: 76px
+      flex-direction: row
 
   &__col
-    padding-left: 40px
-    max-width: 50%
     flex-grow: 1
     color: #FFF
+    +mq($small)
+      padding-top: 10px
+      padding-left: 40px
+      max-width: 49%
+
     &:last-child
-      padding-left: 0
+      +mq($small)
+        padding-top: 0
+        padding-left: 0
+        max-width: 51%
+
 
   &__title
     margin-bottom: 25px
     color: #FFF
-
+    text-align: center
+    +mq($small)
+      margin-bottom: 30px
+      text-align: left
   &__text
     max-width: 327px
     color: #ffffff
     font-size: 16px
     font-weight: 600
-    line-height: 1.333
+    line-height: 1.5
+    text-align: center
+    +mq($small)
+      text-align: left
+      line-height: 1.333
 
   &__form
+    margin-top: 45px
     max-width: 533px
     width: 100%
+    +mq($small)
+      margin-top: 0
+      margin-right: -30px

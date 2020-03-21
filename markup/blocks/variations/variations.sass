@@ -1,55 +1,100 @@
 .variations
-  overflow: hidden
+  +mq($small)
+    overflow: hidden
   &__container
-    padding-top: 80px
-    padding-bottom: 80px
+    padding-top: 57px
+    padding-bottom: 28px
+    +mq($small)
+      padding-top: 84px
+      padding-bottom: 84px
 
-  // &__row
+  &__row
+    &:last-child
+      flex-wrap: wrap
+      +mq($small)
+        flex-wrap: nowrap
+
 
   &__title
-    margin-bottom: 26px
+    margin-bottom: 0
+    text-align: center
+    +mq($small)
+      margin-bottom: 26px
+      text-align: left
 
   &__slider-w
     position: relative
-    margin-bottom: 60px
-
+    margin-right: -15px
+    margin-left: -15px
+    margin-bottom: 50px
+    +mq($small)
+      margin-bottom: 71px
+      margin-right: 25px
+      margin-left: 25px
 
   &__slider-prev,
   &__slider-next
     +resetbutton
     position: absolute
-    top: calc(50% - 25px)
+    top: calc(50% - 20px)
     color: #33CC66
+    display: none
     transform: translateY(-50% )
+    +mq($small)
+      display: block
 
   &__slider-prev
-    left: 0
+    left: -25px
 
   &__slider-next
-    right: 0
+    right: -25px
     transform: translateY(-50%) rotate(180deg)
 
 
   &__col
     // overflow: hidden
+    margin-bottom: 50px
+    +mq($small)
+      margin-bottom: 0
+
     &:last-child
+      margin-bottom: 0
       margin-left: auto
 
   &__col-title
-    margin-bottom: 56px
+    margin-bottom: 34px
+    text-align: center
+    +mq($small)
+      text-align: left
+      margin-bottom: 56px
 
   &__list
-    margin-right: -20px
-    margin-left: -20px
+    margin-right: -10px
+    margin-left: -10px
+    flex-wrap: wrap
+    justify-content: center
+    +mq($small)
+      margin-right: -20px
+      margin-left: -20px
+      justify-content: flex-start
+
 
   &__item
-    padding-right: 20px
-    padding-left: 20px
-    max-width: 230px
+    margin-bottom: 17px
+    padding-right: 10px
+    padding-left: 10px
+    max-width: 50%
     width: 100%
+    text-align: center
+    +mq($small)
+      margin-bottom: 0
+      padding-right: 20px
+      padding-left: 20px
+      max-width: 230px
+      text-align: left
 
   &__image
-    margin-bottom: 12px
+    margin-bottom: 16px
     font-size: 0
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1)
     border-radius: 5px

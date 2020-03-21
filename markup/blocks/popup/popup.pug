@@ -1,0 +1,33 @@
+mixin popup(data)
+  #callback.popup.mfp-hide
+    h2.popup__title Форма заявки
+    form.popup__form.form.form_theme_popup(action="", method="post")
+      .form__row
+        .form__field
+          label.form__label
+            input.form__input(type="text", name="name-2", value="" placeholder="Как к вам обращаться?")
+            //- span.form__label-text Как к вам обращаться?
+
+        .form__field.form__field_phone
+          label.form__label
+            input.form__input(type="text", name="phone-2", value="" placeholder="Номер телефона")
+            //- span.form__label-text Номер телефона
+
+        .form__field
+          label.form__label
+            input.form__input(type="text", name="email-2", value="" placeholder="E-mail")
+            //- span.form__label-text E-mail
+
+
+      label.form__privacy.flex
+        input.form__privacy-checkbox(type="checkbox", value="" )
+        .form__privacy-text Даю согласие на обработку моих персональных данных
+
+      .form__field
+        input.form__submit.button.button_yellow_theme(type="submit",  value="Отправить")
+
+
+mixin popup-success(data)
+  .popup.popup_success.mfp-hide
+    h2.popup__title Спасибо! <br/>Ваша заявка принята.
+    .popup__text Наши менеджеры в ближайшее время <br/>свяжутся с Вами

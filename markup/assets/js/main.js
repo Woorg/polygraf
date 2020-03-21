@@ -52,7 +52,6 @@ import svg4everybody from 'svg4everybody';
         // slidesToShow: 3,
         slidesToScroll: 1,
         // initialSlide: 1,
-        arrows: true,
         dots: false,
         mobileFirst: true,
         infinite: true,
@@ -63,17 +62,20 @@ import svg4everybody from 'svg4everybody';
 
         responsive: [
           {
-            breakpoint: 0,
+            breakpoint: 1,
             settings: {
-              slidesToShow: 1.2,
+              slidesToShow: 1,
+              arrows: false,
             }
           },
           {
-            breakpoint: 375,
+            breakpoint: 376,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 1,
+              arrows: false,
             }
           },
+
           {
             breakpoint: 640,
             settings: {
@@ -92,9 +94,7 @@ import svg4everybody from 'svg4everybody';
     if( $booksSlider.length > 0 ) {
 
       $booksSlider.slick({
-        // slidesToShow: 3,
         slidesToScroll: 1,
-        // initialSlide: 1,
         arrows: true,
         dots: false,
         mobileFirst: true,
@@ -108,13 +108,17 @@ import svg4everybody from 'svg4everybody';
           {
             breakpoint: 0,
             settings: {
-              slidesToShow: 1.2,
+              slidesToShow: 1,
+              arrows: false,
+
             }
           },
           {
-            breakpoint: 375,
+            breakpoint: 376,
             settings: {
               slidesToShow: 2,
+              arrows: false,
+
             }
           },
           {
@@ -148,19 +152,25 @@ import svg4everybody from 'svg4everybody';
           {
             breakpoint: 0,
             settings: {
-              slidesToShow: 1.2,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
             }
           },
           {
-            breakpoint: 375,
+            breakpoint: 376,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true,
             }
           },
           {
             breakpoint: 640,
             settings: {
               slidesToShow: 6,
+              slidesToScroll: 4,
+              dots: true,
             }
           }
         ]
@@ -202,8 +212,6 @@ import svg4everybody from 'svg4everybody';
 
     // Books gallery
 
-
-
     $('.books__item').magnificPopup({
       type: 'image',
       gallery:{
@@ -212,6 +220,21 @@ import svg4everybody from 'svg4everybody';
     });
 
 
+    // Popup
+
+
+    $('.open-popup').magnificPopup({
+      type:'inline',
+      midClick: true
+    });
+
+
+
+    // Clear input
+
+    // $('input').on('focusin', function() {
+    //   this.value = '';
+    // });
 
 
 

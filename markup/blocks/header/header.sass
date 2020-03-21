@@ -6,21 +6,55 @@
   right: 0
 
   &__container
-    padding-top: 15px
-    padding-bottom: 15px
+    padding-top: 20px
+    padding-bottom: 20px
+    justify-content: space-between
+    +mq($small)
+      padding-top: 15px
+      padding-bottom: 15px
+      justify-content: flex-start
+
+
   &__logo
-    margin-right: auto
+    +mq($small)
+      margin-right: auto
+
 
   &__phone
+    position: relative
     color: #ffff99
     font-size: 24px
     font-weight: 700
     letter-spacing: 1.2px
     text-decoration: none
     +tr(color .3s ease)
+    +mq($small)
+      top: -28px
+      margin-right: 0
+      margin-left: 0
+
     &:hover
       color: darken(#ffff99, 10)
       +tr(color .3s ease)
 
   &__button
-    margin-left: 28px
+    position: relative
+    // margin-left: auto
+    +mq($small)
+      top: -28px
+      margin-left: 28px
+
+
+  &__button-icon
+    width: 36px
+    height: 36px
+    +mq($small)
+      display: none
+
+.logo
+  &__icon
+    width: 50px
+    height: 40px
+    +mq($small)
+      width: 160px
+      height: 132px
