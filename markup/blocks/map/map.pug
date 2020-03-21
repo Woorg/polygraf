@@ -1,0 +1,21 @@
+mixin map(data)
+  .map
+    #map.map__area
+
+    .map__container.container
+      ul.map__contacts
+        li.map__contact
+          .map__icon-w
+            != pugHelpers.Icon.call(locals, {iconName: 'time-icon', className: 'map__icon', iconWidth: '28', iconHeight: '28'})
+          .map__text понедельник - пятница 9.00 - 18.00
+
+        li.map__contact
+          .map__icon-w
+            != pugHelpers.Icon.call(locals, {iconName: 'address-icon', className: 'map__icon', iconWidth: '26', iconHeight: '26'})
+          .map__text Просвирин переулок, 15 Москва, Россия, 107045
+
+        li.map__contact
+          .map__icon-w
+            != pugHelpers.Icon.call(locals, {iconName: 'email-icon', className: 'map__icon', iconWidth: '26', iconHeight: '20'})
+          a.map__text(href="mailto:poligraf@mail.ru") poligraf@mail.ru
+

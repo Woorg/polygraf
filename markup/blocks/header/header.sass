@@ -1,0 +1,26 @@
+.header
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  right: 0
+
+  &__container
+    padding-top: 15px
+    padding-bottom: 15px
+  &__logo
+    margin-right: auto
+
+  &__phone
+    color: #ffff99
+    font-size: 24px
+    font-weight: 700
+    letter-spacing: 1.2px
+    text-decoration: none
+    +tr(color .3s ease)
+    &:hover
+      color: darken(#ffff99, 10)
+      +tr(color .3s ease)
+
+  &__button
+    margin-left: 28px

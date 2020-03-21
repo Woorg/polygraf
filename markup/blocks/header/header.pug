@@ -1,0 +1,9 @@
+mixin header(data)
+  header.header
+    .header__container.container.flex.flex_start.flex_vertical
+      a.header__logo(href="#")
+        != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo__icon'})
+
+      a.header__phone(href="tel:+79876543210") +7 987 654 32 10
+
+      a.header__button.button(href="#") Обратный звонок

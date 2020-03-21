@@ -1,0 +1,36 @@
+mixin cta(data)
+  section.cta
+    .cta__container.container
+      .cta__col
+        h2.cta__title.title Остались вопросы?
+
+        .cta__text Наш менеджер с радостью проконсультирует Вас по любому вопросу
+
+      .cta__col
+        form.cta__form.form
+          .form__row
+            .form__field
+              label.form__label
+                span.form__label-text Как к вам обращаться?
+                input.form__input(type="text", name="name", value="")
+
+            .form__field
+              label.form__label
+                span.form__label-text E-mail
+                input.form__input(type="text", name="email", value="")
+
+            .form__field
+              label.form__label
+                span.form__label-text Номер телефона
+                  span.form__label-note *
+                input.form__input(type="text", name="phone", value="")
+
+            input.form__submit(type="submit",  value="Отправить")
+
+
+          .form__row
+
+            label.form__privacy
+              input.form__privacy-checkbox(type="checkbox", value="" )
+              .form__privacy-text Даю согласие на обработку моих персональных данных
+
