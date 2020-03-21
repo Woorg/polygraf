@@ -1,6 +1,9 @@
 // Mixins.
 
 =mq($media)
+  @if $media == 374px
+    @media (min-width: $xsmall)
+      @content
   @if $media == 640px
     @media (min-width: $small)
       @content

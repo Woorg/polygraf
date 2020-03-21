@@ -1,24 +1,24 @@
 .variations
-  +mq($small)
+  +mq($medium)
     overflow: hidden
   &__container
     padding-top: 57px
     padding-bottom: 28px
-    +mq($small)
+    +mq($medium)
       padding-top: 84px
       padding-bottom: 84px
 
   &__row
     &:last-child
       flex-wrap: wrap
-      +mq($small)
+      +mq($medium)
         flex-wrap: nowrap
 
 
   &__title
     margin-bottom: 0
     text-align: center
-    +mq($small)
+    +mq($medium)
       margin-bottom: 26px
       text-align: left
 
@@ -27,7 +27,7 @@
     margin-right: -15px
     margin-left: -15px
     margin-bottom: 50px
-    +mq($small)
+    +mq($medium)
       margin-bottom: 71px
       margin-right: 25px
       margin-left: 25px
@@ -40,7 +40,7 @@
     color: #33CC66
     display: none
     transform: translateY(-50% )
-    +mq($small)
+    +mq($medium)
       display: block
 
   &__slider-prev
@@ -53,8 +53,10 @@
 
   &__col
     // overflow: hidden
+    max-width: 100%
+    width: 100%
     margin-bottom: 50px
-    +mq($small)
+    +mq($medium)
       margin-bottom: 0
 
     &:last-child
@@ -64,7 +66,7 @@
   &__col-title
     margin-bottom: 34px
     text-align: center
-    +mq($small)
+    +mq($medium)
       text-align: left
       margin-bottom: 56px
 
@@ -73,7 +75,7 @@
     margin-left: -10px
     flex-wrap: wrap
     justify-content: center
-    +mq($small)
+    +mq($medium)
       margin-right: -20px
       margin-left: -20px
       justify-content: flex-start
@@ -86,7 +88,7 @@
     max-width: 50%
     width: 100%
     text-align: center
-    +mq($small)
+    +mq($medium)
       margin-bottom: 0
       padding-right: 20px
       padding-left: 20px
@@ -98,6 +100,9 @@
     font-size: 0
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1)
     border-radius: 5px
+    img
+      width: 100%
+      object-fit: cover
 
   &__item-title
     color: #855935

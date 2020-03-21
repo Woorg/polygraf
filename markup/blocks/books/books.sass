@@ -5,7 +5,7 @@
   &__container
     padding-top: 65px
     padding-bottom: 35px
-    +mq($small)
+    +mq($medium)
       padding-top: 146px
       padding-bottom: 110px
 
@@ -15,7 +15,7 @@
     max-width: 205px
     text-align: center
     line-height: 1.3
-    +mq($small)
+    +mq($medium)
       margin-bottom: 74px
       max-width: 100%
 
@@ -24,26 +24,30 @@
     position: relative
     margin-right: -15px
     margin-left: -15px
-    +mq($small)
+    +mq($medium)
       margin-right: 55px
       margin-left: 65px
-
-  // &__slider
 
   .slick-list
     padding-left: 4%
     padding-right: 30%
+
+    +mq($xsmall)
+      padding-right: 5%
+
     +mq($small)
+      padding-right: 5%
+
+    +mq($medium)
       padding-right: 0
       padding-left: 0
-
 
   &__item-w
     padding-top: 27px
     padding-right: 48px
     padding-bottom: 27px
     padding-left: 0
-    +mq($small)
+    +mq($medium)
       padding-right: 20px
       padding-left: 20px
 
@@ -115,7 +119,7 @@
     display: none
     color: #33CC66
     transform: translateY(-50% )
-    +mq($small)
+    +mq($medium)
       display: block
   &__slider-prev
     left: -65px

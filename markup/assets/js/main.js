@@ -162,7 +162,7 @@ import svg4everybody from 'svg4everybody';
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
-              dots: true,
+              dots: false,
             }
           },
           {
